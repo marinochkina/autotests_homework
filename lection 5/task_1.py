@@ -7,11 +7,13 @@
 
 
 def letter_stat(our_str):
-    # Здесь нужно написать код
+    letters_dict = {}
+    for letter in our_str:
+        if letter not in letters_dict:
+            letters_dict[letter] = our_str.count(letter)
     return letters_dict
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
-
 
 data = ['letter', "honduras", "тегусигальпа", "автотестирование", "тензор", "управлениекачеством", 'мануальщик', '',
         'курс', 'ы', 'лол', 'кек']

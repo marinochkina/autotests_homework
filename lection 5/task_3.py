@@ -19,7 +19,11 @@
 
 
 def everything_for_your_cat(cats_data):
-    # Здесь нужно написать код
+    our_str = {}
+    for cat in cats_data:
+        temp = cat[0] + ', ' + str(cat[1])
+        our_str.setdefault(cat[2:], []).append(temp)
+    our_str = ''.join(f'{k[0]} {k[1]}: {"; ".join(v)}\n' for k, v in our_str.items())
     return our_str
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
