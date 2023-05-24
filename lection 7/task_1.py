@@ -9,8 +9,27 @@
 # Segment((-2, -3), (4, 5)).x_axis_intersection() --> True
 # Segment((-2, -3), (4, -5)).y_axis_intersection() --> False
 
-# Здесь пишем код
+class Segment:
+    def __init__(self, dot_1, dot_2):
+        self.dot_1 = dot_1
+        self.dot_2 = dot_2
 
+    def length(self):
+        length = round(((self.dot_1[0] - self.dot_2[0]) ** 2
+                        + (self.dot_1[1] - self.dot_2[1]) ** 2) ** 0.5, 2)
+        return length
+
+    def x_axis_intersection(self):
+        if self.dot_1[1] <= 0 <= self.dot_2[1] or self.dot_2[1] <= 0 <= self.dot_1[1]:
+            return True
+        else:
+            return False
+
+    def y_axis_intersection(self):
+        if self.dot_1[1] <= 0 <= self.dot_2[1] or self.dot_2[1] <= 0 <= self.dot_1[1]:
+            return True
+        else:
+            return False
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 
